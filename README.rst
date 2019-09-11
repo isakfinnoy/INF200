@@ -1,7 +1,7 @@
 INF200 Exersices:
 =================
 
-FIRST_NAME SURNAME:
+isak finnoy:
 -------------------
 
 This repository contains all the exersices written as part of the
