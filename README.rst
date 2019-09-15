@@ -1,7 +1,7 @@
 INF200 Exersices:
 =================
 
-isak finnoy:
+Isak Finnoy
 -------------------
 
 This repository contains all the exersices written as part of the
