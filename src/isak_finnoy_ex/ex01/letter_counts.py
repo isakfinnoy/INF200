@@ -1,18 +1,23 @@
 __author__ = 'Isak Finnoy'
 __email__ = 'isfi@nmbu.no'
 
+
 def letter_freq(txt):
-    dict = {}
+    dic = {}
+
     txt = txt.lower()
+
     for n in txt:
-        keys = dict.keys()
+        keys = dic.keys()
         if n in keys:
-            dict[n] += 1
+            dic[n] += 1
         else:
-            dict[n] = 1
-    return dict
+            dic[n] = 1
+    return dic
+
 
 if __name__ == '__main__':
+
     text = input('Please enter text to analyse: ')
 
     frequencies = letter_freq(text)
