@@ -82,14 +82,14 @@ def test_sorting():
         random_list = random.sample(range(1, 100), n)
         list_of_lists_and_strings.append(random_list)
 
+    letters = string.ascii_letters
     for elem2 in range(5):
-        list_random_strings = []
-        for strings in range(5):
-            m = random.randint(1, 5)
-            letters = string.ascii_letters
-            random_string = [random.choice(letters) for a in range(m)]
-            list_random_strings.append(random_string)
-        list_of_lists_and_strings.append(list_random_strings)
+        list_string = []
+        n = random.randint(1, 5)
+        for i in range(n):
+            random_string = random.choice(letters)
+            list_string.append(random_string)
+        list_of_lists_and_strings.append(list_string)
 
     for ind in range(len(list_of_lists_and_strings)):
         assert bubble_sort(list_of_lists_and_strings[ind]) ==\
