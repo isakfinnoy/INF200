@@ -41,3 +41,12 @@ class ListRand:
         r = self.lis[self.idx]
         self.idx += 1
         return r
+
+
+if __name__ == "__main__":
+    list_random = ListRand([3, 5, 9, 2, 1, 4])
+    print(list_random.rand())
+    print(list_random.rand())
+    lcg = LCGRand(514)
+    print(lcg.rand())
+    print(lcg.rand())
