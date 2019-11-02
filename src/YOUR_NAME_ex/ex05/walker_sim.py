@@ -104,11 +104,9 @@ class Simulation:
             The number of steps taken
         """
         walker = Walker(self.start, self.home)
-        position = self.start
 
-        while position != self.home:
+        while not walker.is_at_home()
             walker.move()
-            position = walker.get_position()
 
         return walker.get_steps()
 
