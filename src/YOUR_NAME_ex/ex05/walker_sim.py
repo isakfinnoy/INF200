@@ -35,7 +35,7 @@ class Walker:
             rnd = -1
         self.x += rnd
         self.step += 1
-        return self.x
+
 
     def is_at_home(self):
         """
@@ -72,9 +72,9 @@ def walk_home(x0, h):
     return walk.get_steps()
 
 
-class Simulation(Walker):
+class Simulation:
 
-    def __init__(self, x0, h, seed):
+    def __init__(self, start, home, seed):
 
         """
         Initialise the simulation
@@ -88,7 +88,8 @@ class Simulation(Walker):
         seed : int
             Random generator seed
         """
-        super().__init__(x0, h)
+        self.start = start
+        self.home = home
         self.seed = seed
 
 
@@ -102,10 +103,10 @@ class Simulation(Walker):
         int
             The number of steps taken
         """
-        walker = Walker(self.x0, self.h)
-        position = self.x0
+        walker = Walker(self.start, self.home)
+        position = self.start
 
-        while position != self.h:
+        while position != self.home:
             walker.move()
             position = walker.get_position()
 
