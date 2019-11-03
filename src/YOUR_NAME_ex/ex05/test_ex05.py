@@ -92,13 +92,3 @@ def test_bounded_simulation():
     assert all(rs > 0 for rs in r)
 
 
-def test_gambler():
-    """Test that Gambler class can be used as required."""
-
-    initial, total, p = 50, 100, 0.49
-    g = Gambler(initial, total, p)
-    assert not g.is_broke()
-    assert not g.owns_all()
-    g.play()
-    assert not g.is_broke()
-    assert not g.owns_all()

@@ -36,7 +36,6 @@ class Walker:
         self.x += rnd
         self.step += 1
 
-
     def is_at_home(self):
         """
         Checks if person has arrived at destination
@@ -75,7 +74,6 @@ def walk_home(x0, h):
 class Simulation:
 
     def __init__(self, start, home, seed):
-
         """
         Initialise the simulation
 
@@ -92,8 +90,6 @@ class Simulation:
         self.home = home
         self.seed = seed
 
-
-
     def single_walk(self):
         """
         Simulate single walk from start to home, returning number of steps.
@@ -105,12 +101,10 @@ class Simulation:
         """
         walker = Walker(self.start, self.home)
 
-        while not walker.is_at_home()
+        while not walker.is_at_home():
             walker.move()
 
         return walker.get_steps()
-
-
 
     def run_simulation(self, num_walks):
         """
@@ -132,6 +126,7 @@ class Simulation:
 
 
 if __name__ == "__main__":
+
     sit1 = Simulation(0, 10, 12345)
     sit2 = Simulation(10, 0, 12345)
     sit3 = Simulation(0, 10, 54321)
@@ -150,3 +145,4 @@ if __name__ == "__main__":
     print(lis4)
     print(lis5)
     print(lis6)
+
